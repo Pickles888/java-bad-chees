@@ -13,7 +13,7 @@ public class Piece {
     }
 
     public void move() throws Exception {
-        throw new Exception("Override This Bean");
+        throw new Exception("Override This");
 
     } //??????
     
