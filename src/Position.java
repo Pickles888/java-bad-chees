@@ -12,14 +12,28 @@ public class Position {
         this.chessNotation = chessNotation;
         char[] letters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
 
-        String[] chessNotationSplit = chessNotation.split("(?<=\\D)(?=\\d)");
+        // separate the 2 parts of the notation
+        //  - split the string into an array
+        //  - create 2 new varibles from parts of that array (both chars)
+
+        // get the y position
+        //  - cast the second part (the number) from type char to type int
+        //  - assign that to the y value
+
+        // get the x position
+        //  - make the letter lower case
+        //  - find the index of that letter in the letters array and assign that to the x value
+
+        String[] chessNotationSplit = chessNotation.split("");
+
+
     }
 
     public int getX() {
-
+        // return the x member varible
     }
 
     public int getY() {
-
+        // return the y member varible
     }
 }
