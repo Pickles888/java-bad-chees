@@ -1,7 +1,9 @@
 # Java Bad Chees
 a bad chess cli game made in java as practice
 
-## File Structure
+<details>
+
+<summary>File Structure</summary>
 
 ```mermaid
 graph TD;
@@ -12,6 +14,8 @@ graph TD;
     piece-->knight;
     piece-->pawn;
 ```
+
+</details>
 
 ## To-Do
 
