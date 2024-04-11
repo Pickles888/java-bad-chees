@@ -27,7 +27,6 @@ graph TD;
         - [ ] piece 
         - [ ] knight
         - [ ] pawn
-- [x] beans
 ___
 
 > [!WARNING]
