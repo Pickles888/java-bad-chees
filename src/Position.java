@@ -10,11 +10,11 @@ public class Position {
     
     public Position(String chessNotation) {
         this.chessNotation = chessNotation;
-        char[] letters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
+        char chessNotationPiece;
+        int chessNotationLocationNum;
+        char chessNotationLocationChar;
 
-        // separate the 2 parts of the notation
-        //  - split the string into an array
-        //  - create 2 new varibles from parts of that array (both chars)
+        char[] letters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
 
         // get the y position
         //  - cast the second part (the number) from type char to type int
@@ -24,7 +24,10 @@ public class Position {
         //  - make the letter lower case
         //  - find the index of that letter in the letters array and assign that to the x value
 
-        String[] chessNotationSplit = chessNotation.split("");
+        String[] chessNotationSplit = chessNotation.split("(?!^)");
+
+        chessNotationPiece = chessNotationSplit[0].chatAt(0);
+        chessNotationLocationNum = chessNotationSplit[2];
 
 
     }

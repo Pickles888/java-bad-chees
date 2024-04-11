@@ -1,13 +1,9 @@
-{ pkgs ? import <nixpkgs> { } }:
+let pkgsPin = "https://github.com/NixOS/nixpkgs/archive/d6b3ddd253c5.tar.gz";
+in { pkgs ? import (fetchTarball pkgsPin) { } }:
 pkgs.mkShell {
-  nativeBuildInputs = with pkgs.buildPackages; [
-    jdk17
-    jetbrains.idea-community
-  ];
+  nativeBuildInputs = with pkgs.buildPackages; [ jdk17 vscode ];
 
   shellHook = ''
-    idea-community . &
-    # !ask Nate how java linkers work
-    #alias build="javac "
+    code . >/dev/null 2>&1 &
   '';
 }
