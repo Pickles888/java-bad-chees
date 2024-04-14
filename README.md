@@ -20,7 +20,13 @@ graph TD;
 ## To-Do
 
 - [ ] complete the project
-- [x] beans
+    - [ ] board
+    - [ ] player
+    - [x] position
+    - [ ] pieces
+        - [ ] piece 
+        - [ ] knight
+        - [ ] pawn
 ___
 
 > [!WARNING]
