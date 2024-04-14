@@ -1,17 +1,26 @@
 package src;
 
 import src.Piece.Piece;
+import src.Position;
 
 public class Board {
-    // turn this into a 2d array rather than 1d
-    private Piece[] pieces; // you will need to change this line
+    private Position[][] positions = new Position[8][8];
 
     public Board() {
-        // create a few pieces, make sure they are subclasses of piece and not piece itself
+        for (int i = 0; i <=8; i++) {
+            for (int j = 0; j <=8; j++) { 
+                this.positions[i][j] = new Position(i, j, null);
+            }
+        }
     }
 
     // add a return type to this function (line below)
-    public printBoard() {
+    public int[] printBoard() {
+        for (int i = 0; i <= 8; i++) {
+            for (int j = 0; i <= 8; i++) {
+                
+            }
+        }
 
         // make a nested for loop to iterate through each value in piece, which should be null
         // the following comments should be actions taken within this loop ( - - is the inner loop, - is the outer loop)

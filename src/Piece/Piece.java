@@ -3,16 +3,15 @@ package src.Piece;
 import src.Position;
 
 public class Piece {
-    // add a member varible to set the letter that will represent the piece on the board
-    // also make sure you add that to the constructor
-
-    private Position position;
+    private Position pos;
     private boolean isAlive;
     private boolean isBlack;
+    private char pieceChar;
 
-    protected Piece(Position position, boolean isBlack) {
-        this.position = position;
+    protected Piece(int x, int y, boolean isBlack) {
+        this.pos = new Position(x, y, this);
         this.isBlack = isBlack;
+        this.isAlive = true;
     }
 
     public void move() throws Exception {
@@ -20,8 +19,6 @@ public class Piece {
     }
     
     public void killPiece() {
-
+        this.isAlive = false;
     }
-
-    // implement method to get position
 }

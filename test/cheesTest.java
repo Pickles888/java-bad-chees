@@ -1,15 +1,9 @@
 public class cheesTest {
-    public static void main() {
-        char chessNotationPiece;
-        int chessNotationLocationNum;
-        char chessNotationLocationChar;
-        String chessNotation = "Nf4";
-        String[] chessNotationSplit = chessNotation.split("(?!^)");
+    public static void main(String[] args) {  
+        char[][] arrays = new char[8][8];
+        arrays[2][7] = '1';
 
-        chessNotationPiece = chessNotationSplit[0].charAt(0);
-        chessNotationLocationNum = Integer.parseInt(chessNotationSplit[2]);
 
-        System.out.println(chessNotationPiece);
-        System.out.println(chessNotationLocationNum);
+        System.out.println(arrays[2][7]);
     }
 }
