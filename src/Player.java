@@ -26,5 +26,7 @@ public class Player {
         xpos = chessNotationCharMap.get(chessNotationLocationChar);
         ypos = chessNotationLocationNum;
 
+        
+
     }
 }
