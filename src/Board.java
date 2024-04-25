@@ -28,4 +28,5 @@ public class Board {
         //  - - otherwise get the charcter to represent the piece
         //  - - print out what needs to be printed, make sure that you are printing on the same line, no line breaks
         //  - print a line break and go to the next row
+    }
 }
