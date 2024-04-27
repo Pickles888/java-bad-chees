@@ -1,17 +1,18 @@
-package src.Piece;
-
-import src.Position;
+package src;
 
 public class Piece {
-    private Position pos;
+    public Position pos;
     private boolean isAlive;
     private boolean isBlack;
-    private char pieceChar;
+    public char pieceChar;
 
-    protected Piece(int x, int y, boolean isBlack) {
-        this.pos = new Position(x, y, this);
+    protected Piece(int x, int y, boolean isBlack, char pieceChar, Board board) {
+        this.pos = new Position(x - 1, y - 1, this);
         this.isBlack = isBlack;
         this.isAlive = true;
+        this.pieceChar = pieceChar;
+
+        board.addPiece(this);
     }
 
     public void move() throws Exception {
