@@ -1,4 +1,4 @@
-package src;
+package javaBadChees;
 
 import java.util.HashMap;
 

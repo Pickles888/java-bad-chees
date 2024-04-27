@@ -1,4 +1,4 @@
-package src;
+package javaBadChees;
 
 public class Player {
     private boolean isBlack;

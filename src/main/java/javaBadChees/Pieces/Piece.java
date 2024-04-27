@@ -1,4 +1,4 @@
-package src;
+package javaBadChees;
 
 public class Piece {
     public Position pos;
