@@ -1,5 +1,5 @@
 {
-  description = "Bad Java Chess";
+  description = "Bad CLI chess made in java for practice.";
 
   inputs = { nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable"; };
 
