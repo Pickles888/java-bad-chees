@@ -6,10 +6,17 @@
   outputs = { self, nixpkgs, ... }:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+      };
     in {
-      devShells.${system}.default =
-        pkgs.mkShell { nativeBuildInputs = with pkgs; [ jdk17 maven ]; };
+      devShells.${system}.default = pkgs.mkShell {
+        nativeBuildInputs = with pkgs; [ jdk17 maven vscode ];
+        shellHook = ''
+          code . &! exit
+        '';
+      };
       packages.${system}.default = pkgs.maven.buildMavenPackage rec {
         pname = "javaBadChees";
         version = "1.0";
