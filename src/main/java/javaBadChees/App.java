@@ -5,7 +5,7 @@ public class App {
         Board board = new Board();
         Piece piece = new Piece(1, 1, true, 'e', board);
         
+        piece.move();
         board.printBoard();
-
     }
 }

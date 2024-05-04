@@ -2,21 +2,25 @@ package javaBadChees;
 
 public class Piece {
     public Position pos;
-    private boolean isAlive;
-    private boolean isBlack;
+    protected boolean isAlive;
+    protected boolean isBlack;
     public char pieceChar;
+    protected Board board;
 
     protected Piece(int x, int y, boolean isBlack, char pieceChar, Board board) {
-        this.pos = new Position(x - 1, y - 1, this);
+        this.pos = new Position(x, y, this);
         this.isBlack = isBlack;
         this.isAlive = true;
         this.pieceChar = pieceChar;
+        this.board = board;
 
-        board.addPiece(this);
+        this.board.addPiece(this);
     }
 
-    public void move() throws Exception {
-        throw new Exception("Override This");
+    public void move() {
+        board.removePiece(this);
+        pos.x++;
+        board.addPiece(this);
     }
     
     public void killPiece() {

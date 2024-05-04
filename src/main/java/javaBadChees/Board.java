@@ -32,4 +32,8 @@ public class Board {
     public void addPiece(Piece piece) {
         pieceArray[piece.pos.x][piece.pos.y] = piece;
     }
+
+    public void removePiece(Piece piece) {
+        pieceArray[piece.pos.x][piece.pos.y] = null;
+    }
 }
