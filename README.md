@@ -1,3 +1,5 @@
+never finished it :/
+
 # Java Bad Chees
 a bad chess cli game made in java as practice
 
